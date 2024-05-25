@@ -3,19 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Intro component with sign up form</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js" defer></script>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="container">
@@ -31,24 +26,30 @@
         <h4>Try it free 7 days<span> then $20/mo. thereafter</span></h4>
         <form action="" id="form">
           <label for="firstName">
-            <input type="text" class="firstName" placeholder="First Name" />
+            <input type="text" id="firstName" class="error"  placeholder="First Name" />
           </label>
+          <div id="firstNameError"></div>
           <label for="lastName">
-            <input type="text" class="lastName" placeholder="Last Name" />
+            <input type="text" id="lastName" class="error" placeholder="Last Name" />
           </label>
+          <div id="lastNameError"></div>
           <label for="email">
-            <input type="email" class="email" placeholder="Email" />
+            <input type="email" id="email" class="error" placeholder="Email" />
+            <i class="fa-solid fa-circle-exclamation"></i>
           </label>
+          <div id="emailError"></div>
           <label for="password">
-            <input type="password" class="password" placeholder="Password" />
+            <input type="password" class="error" id="password" placeholder="Password" />
           </label>
+          <div id="passwordError"></div>
           <button id="button">Claim your free trial</button>
           <small
             >By clicking the button, you are agreeing to our
-            <span> Terms and Services</span></small
+            <span> Terms and Services  <i class="fa-solid fa-circle-exclamation"></i></span></small
           >
         </form>
       </div>
     </main>
+    <script src="./app.js" defer></script>
   </body>
 </html>
