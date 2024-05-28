@@ -10,7 +10,8 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Intro component with sign up form</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="container">
@@ -35,11 +36,15 @@
           <div id="lastNameError"></div>
           <label for="email">
             <input type="email" id="email" class="error" placeholder="Email" />
-            <i class="fa-solid fa-circle-exclamation"></i>
           </label>
           <div id="emailError"></div>
           <label for="password">
+            <div class="input-box">
             <input type="password" class="error" id="password" placeholder="Password" />
+            <span class="password-icon">
+              <i class="fa-regular fa-eye-slash" id="eye"></i>
+            </span>
+          </div>
           </label>
           <div id="passwordError"></div>
           <button id="button">Claim your free trial</button>

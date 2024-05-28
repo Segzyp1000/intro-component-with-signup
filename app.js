@@ -24,6 +24,7 @@ form.addEventListener('submit', (e) => {
       firstNameError.style.color = 'red';
     firstName.classList.add('error');
     firstName.classList.add('error-border');
+    
   } else {
     firstNameError.textContent = '';
     firstName.classList.remove('error');
@@ -87,5 +88,20 @@ function validateEmail(email) {
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
+
+
+const eye = document.getElementById('eye');
+const passwordInput = document.getElementById('password');
+
+eye.addEventListener('click', () => {
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    eye.classList.add('fa-eye-slash');
+  } else {
+    passwordInput.type = 'password';
+    eye.classList.remove('fa-eye-slash');
+  }
+});
+
 
 
